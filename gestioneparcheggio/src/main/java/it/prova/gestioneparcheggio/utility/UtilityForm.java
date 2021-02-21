@@ -49,7 +49,7 @@ public class UtilityForm {
 			return null;
 
 		try {
-			return new SimpleDateFormat("HH:mm").parse(orarioAperturaInputParam);
+			return new SimpleDateFormat("HH:mm:ss").parse(orarioAperturaInputParam);
 		} catch (ParseException e) {
 			return null;
 		}

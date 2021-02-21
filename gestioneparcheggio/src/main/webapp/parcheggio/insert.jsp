@@ -52,13 +52,15 @@
 				<div class="form-row">
 					<div class="form-group col-md-3">
 						<label>Orario di apertura <span class="text-danger">*</span></label>
-						<input class="form-control" id="orarioApertura" type="date" placeholder="HH:mm" name="orarioApertura"
-							required>
+						<input class="form-control" id="orarioApertura" type="time"
+							placeholder="HH:mm:ss" min="08:00:00" max="20:00:00"
+							name="orarioApertura" required>
 					</div>
 					<div class="form-group col-md-3">
 						<label>Orario di chiusura <span class="text-danger">*</span></label>
-						<input class="form-control" id="orarioChiusura" type="date" placeholder="HH:mm" name="orarioChiusura"
-							required>
+						<input class="form-control" id="orarioChiusura" type="time"
+							placeholder="HH:mm:ss" min="08:00:00" max="20:00:00"
+							name="orarioChiusura" required>
 					</div>
 					<div class="form-group col-md-3">
 						<label>Giorno di chiusura <span class="text-danger">*</span></label>
