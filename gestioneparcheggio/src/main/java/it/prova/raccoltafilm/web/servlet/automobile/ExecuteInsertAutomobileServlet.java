@@ -32,7 +32,7 @@ public class ExecuteInsertAutomobileServlet extends HttpServlet {
 
 		Long idParcheggioParsed = UtilityForm.parseIdEntryToLongFromString(parcheggioIdParam);
 
-		Date orarioStampaTicketParsed = UtilityForm.parseTimeEntryFromString(orarioStampaTicketParam);
+		LocalTime orarioStampaTicketParsed = UtilityForm.parseTimeEntryFromString(orarioStampaTicketParam);
 
 		Integer minutiDurataTicketParsed = UtilityForm.parseIntegerFromString(minutiDurataTicketParam);
 
@@ -43,7 +43,7 @@ public class ExecuteInsertAutomobileServlet extends HttpServlet {
 			return;
 		}
 
-		Automobile automobileInsertInstance = new Automobile(marcaParam, modelloParam, targaParam,(Time) orarioStampaTicketParsed,
+		Automobile automobileInsertInstance = new Automobile(marcaParam, modelloParam, targaParam, orarioStampaTicketParsed,
 				minutiDurataTicketParsed,new Parcheggio());
 
 		try {

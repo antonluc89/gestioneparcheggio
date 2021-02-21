@@ -32,9 +32,9 @@ public class ExecuteUpdateParcheggioServlet extends HttpServlet {
 
 		Long idParsedParcheggio = UtilityForm.parseIdEntryToLongFromString(idParcheggioParam);
 
-		Date orarioAperturaParsed = UtilityForm.parseTimeEntryFromString(orarioAperturaParam);
+		LocalTime orarioAperturaParsed = UtilityForm.parseTimeEntryFromString(orarioAperturaParam);
 
-		Date orarioChiusuraParsed = UtilityForm.parseTimeEntryFromString(orarioChiusuraParam);
+		LocalTime orarioChiusuraParsed = UtilityForm.parseTimeEntryFromString(orarioChiusuraParam);
 
 		Date giornoChiusuraParsed = UtilityForm.parseDateEntryFromString(giornoChiusuraParam);
 
@@ -54,8 +54,8 @@ public class ExecuteUpdateParcheggioServlet extends HttpServlet {
 					.caricaSingoloElementoById(idParsedParcheggio);
 			parcheggioUpdateInstance.setNome(nomeParam);
 			parcheggioUpdateInstance.setIndirizzo(indirizzoParam);
-			parcheggioUpdateInstance.setOrarioApertura((Time) orarioAperturaParsed);
-			parcheggioUpdateInstance.setOrarioChiusura((Time) orarioChiusuraParsed);
+			parcheggioUpdateInstance.setOrarioApertura(orarioAperturaParsed);
+			parcheggioUpdateInstance.setOrarioChiusura(orarioChiusuraParsed);
 			parcheggioUpdateInstance.setGiornoChiusura(giornoChiusuraParsed);
 			parcheggioUpdateInstance.setCapienza(capienzaParsed);
 

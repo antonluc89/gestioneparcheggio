@@ -29,7 +29,7 @@ public class Automobile {
 	@Column(name = "targa")
 	private String targa;
 	@Column(name = "orarioStampaTicket")
-	private Time orarioStampaTicket;
+	private LocalTime orarioStampaTicket;
 	@Column(name = "minutiDurataTicket")
 	private Integer minutiDurataTicket;
 
@@ -40,7 +40,7 @@ public class Automobile {
 	public Automobile() {
 	}
 
-	public Automobile(String marca, String modello, String targa, Time orarioStampaTicket, Integer minutiDurataTicket, Parcheggio parcheggio) {
+	public Automobile(String marca, String modello, String targa, LocalTime orarioStampaTicket, Integer minutiDurataTicket, Parcheggio parcheggio) {
 		this.marca = marca;
 		this.modello = modello;
 		this.targa = targa;
@@ -81,11 +81,11 @@ public class Automobile {
 		this.targa = targa;
 	}
 
-	public Time getOrarioStampaTicket() {
+	public LocalTime getOrarioStampaTicket() {
 		return orarioStampaTicket;
 	}
 
-	public void setOrarioStampaTicket(Time orarioStampaTicket) {
+	public void setOrarioStampaTicket(LocalTime orarioStampaTicket) {
 		this.orarioStampaTicket = orarioStampaTicket;
 	}
 

@@ -29,9 +29,9 @@ public class ExecuteInsertParcheggioServlet extends HttpServlet {
 		String giornoChiusuraParam = request.getParameter("giornoChiusura");
 		String capienzaParam = request.getParameter("capienza");
 
-		Date orarioAperturaParsed = UtilityForm.parseTimeEntryFromString(orarioAperturaParam);
+		LocalTime orarioAperturaParsed = UtilityForm.parseTimeEntryFromString(orarioAperturaParam);
 
-		Date orarioChiusuraParsed = UtilityForm.parseTimeEntryFromString(orarioChiusuraParam);
+		LocalTime orarioChiusuraParsed = UtilityForm.parseTimeEntryFromString(orarioChiusuraParam);
 
 		Date giornoChiusuraParsed = UtilityForm.parseDateEntryFromString(giornoChiusuraParam);
 
@@ -44,8 +44,8 @@ public class ExecuteInsertParcheggioServlet extends HttpServlet {
 			return;
 		}
 
-		Parcheggio parcheggioInstance = new Parcheggio(nomeParam, indirizzoParam,(Time) orarioAperturaParsed,
-				(Time) orarioChiusuraParsed, giornoChiusuraParsed, capienzaParsed);
+		Parcheggio parcheggioInstance = new Parcheggio(nomeParam, indirizzoParam, orarioAperturaParsed,
+				 orarioChiusuraParsed, giornoChiusuraParsed, capienzaParsed);
 
 		try {
 

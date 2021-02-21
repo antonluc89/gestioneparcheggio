@@ -44,15 +44,11 @@ public class UtilityForm {
 		}
 	}
 	
-	public static Date parseTimeEntryFromString(String orarioAperturaInputParam) {
+	public static LocalTime parseTimeEntryFromString(String orarioAperturaInputParam) {
 		if (StringUtils.isBlank(orarioAperturaInputParam))
 			return null;
 
-		try {
-			return new SimpleDateFormat("HH:mm:ss").parse(orarioAperturaInputParam);
-		} catch (ParseException e) {
-			return null;
-		}
+		return LocalTime.parse(orarioAperturaInputParam,DateTimeFormatter.ofPattern("HH:mm:ss"));
 	}
 
 	public static Long parseIdEntryToLongFromString(String idEntryStringParam) {

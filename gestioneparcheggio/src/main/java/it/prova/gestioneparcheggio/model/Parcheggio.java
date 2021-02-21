@@ -27,9 +27,9 @@ public class Parcheggio {
 	@Column(name = "indirizzo")
 	private String indirizzo;
 	@Column(name = "orarioApertura")
-	private Time orarioApertura;
+	private LocalTime orarioApertura;
 	@Column(name = "orarioChiusura")
-	private Time orarioChiusura;
+	private LocalTime orarioChiusura;
 	@Column(name = "giornoChiusura")
 	private Date giornoChiusura;
 	@Column(name = "capienza")
@@ -41,7 +41,7 @@ public class Parcheggio {
 	public Parcheggio() {
 	}
 
-	public Parcheggio(String nome, String indirizzo, Time orarioApertura, Time orarioChiusura, Date giornoChiusura,
+	public Parcheggio(String nome, String indirizzo, LocalTime orarioApertura, LocalTime orarioChiusura, Date giornoChiusura,
 			Integer capienza) {
 		this.nome = nome;
 		this.indirizzo = indirizzo;
@@ -75,19 +75,19 @@ public class Parcheggio {
 		this.indirizzo = indirizzo;
 	}
 
-	public Time getOrarioApertura() {
+	public LocalTime getOrarioApertura() {
 		return orarioApertura;
 	}
 
-	public void setOrarioApertura(Time orarioApertura) {
+	public void setOrarioApertura(LocalTime orarioApertura) {
 		this.orarioApertura = orarioApertura;
 	}
 
-	public Time getOrarioChiusura() {
+	public LocalTime getOrarioChiusura() {
 		return orarioChiusura;
 	}
 
-	public void setOrarioChiusura(Time orarioChiusura) {
+	public void setOrarioChiusura(LocalTime orarioChiusura) {
 		this.orarioChiusura = orarioChiusura;
 	}
 

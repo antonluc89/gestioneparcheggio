@@ -34,7 +34,7 @@ public class ExecuteUpdateAutomobileServlet extends HttpServlet {
 
 		Long idParcheggioParsed = UtilityForm.parseIdEntryToLongFromString(parcheggioIdParam);
 
-		Date orarioStampaTicketParsed = UtilityForm.parseTimeEntryFromString(orarioStampaTicketParam);
+		LocalTime orarioStampaTicketParsed = UtilityForm.parseTimeEntryFromString(orarioStampaTicketParam);
 
 		Integer minutiDurataTicketParsed = UtilityForm.parseIntegerFromString(minutiDurataTicketParam);
 
@@ -52,7 +52,7 @@ public class ExecuteUpdateAutomobileServlet extends HttpServlet {
 			automobileUpdateInstance.setMarca(marcaParam);
 			automobileUpdateInstance.setModello(modelloParam);
 			automobileUpdateInstance.setTarga(targaParam);
-			automobileUpdateInstance.setOrarioStampaTicket((Time) orarioStampaTicketParsed);
+			automobileUpdateInstance.setOrarioStampaTicket(orarioStampaTicketParsed);
 			automobileUpdateInstance.setMinutiDurataTicket(minutiDurataTicketParsed);
 			automobileUpdateInstance.setParcheggio(
 					MyServiceFactory.getParcheggioServiceInstance().caricaSingoloElementoById(idParcheggioParsed));
