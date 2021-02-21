@@ -3,6 +3,8 @@ package it.prova.gestioneparcheggio.utility;
 import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 import org.apache.commons.lang3.StringUtils;
@@ -47,12 +49,12 @@ public class UtilityForm {
 			return null;
 
 		try {
-			return new SimpleDateFormat("hh:mm:ss").parse(orarioAperturaInputParam);
+			return new SimpleDateFormat("HH:mm").parse(orarioAperturaInputParam);
 		} catch (ParseException e) {
 			return null;
 		}
 	}
-	
+
 	public static Long parseIdEntryToLongFromString(String idEntryStringParam) {
 		if (StringUtils.isBlank(idEntryStringParam))
 			return null;

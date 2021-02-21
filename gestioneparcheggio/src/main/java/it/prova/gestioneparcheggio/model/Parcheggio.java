@@ -1,6 +1,7 @@
 package it.prova.gestioneparcheggio.model;
 
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -26,9 +27,9 @@ public class Parcheggio {
 	@Column(name = "indirizzo")
 	private String indirizzo;
 	@Column(name = "orarioApertura")
-	private Date orarioApertura;
+	private Time orarioApertura;
 	@Column(name = "orarioChiusura")
-	private Date orarioChiusura;
+	private Time orarioChiusura;
 	@Column(name = "giornoChiusura")
 	private Date giornoChiusura;
 	@Column(name = "capienza")
@@ -40,7 +41,7 @@ public class Parcheggio {
 	public Parcheggio() {
 	}
 
-	public Parcheggio(String nome, String indirizzo, Date orarioApertura, Date orarioChiusura, Date giornoChiusura,
+	public Parcheggio(String nome, String indirizzo, Time orarioApertura, Time orarioChiusura, Date giornoChiusura,
 			Integer capienza) {
 		this.nome = nome;
 		this.indirizzo = indirizzo;
@@ -74,19 +75,19 @@ public class Parcheggio {
 		this.indirizzo = indirizzo;
 	}
 
-	public Date getOrarioApertura() {
+	public Time getOrarioApertura() {
 		return orarioApertura;
 	}
 
-	public void setOrarioApertura(Date orarioApertura) {
+	public void setOrarioApertura(Time orarioApertura) {
 		this.orarioApertura = orarioApertura;
 	}
 
-	public Date getOrarioChiusura() {
+	public Time getOrarioChiusura() {
 		return orarioChiusura;
 	}
 
-	public void setOrarioChiusura(Date orarioChiusura) {
+	public void setOrarioChiusura(Time orarioChiusura) {
 		this.orarioChiusura = orarioChiusura;
 	}
 

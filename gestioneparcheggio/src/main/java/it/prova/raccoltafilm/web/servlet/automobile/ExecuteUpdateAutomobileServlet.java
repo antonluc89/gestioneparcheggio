@@ -1,6 +1,8 @@
 package it.prova.raccoltafilm.web.servlet.automobile;
 
 import java.io.IOException;
+import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -50,7 +52,7 @@ public class ExecuteUpdateAutomobileServlet extends HttpServlet {
 			automobileUpdateInstance.setMarca(marcaParam);
 			automobileUpdateInstance.setModello(modelloParam);
 			automobileUpdateInstance.setTarga(targaParam);
-			automobileUpdateInstance.setOrarioStampaTicket(orarioStampaTicketParsed);
+			automobileUpdateInstance.setOrarioStampaTicket((Time) orarioStampaTicketParsed);
 			automobileUpdateInstance.setMinutiDurataTicket(minutiDurataTicketParsed);
 			automobileUpdateInstance.setParcheggio(
 					MyServiceFactory.getParcheggioServiceInstance().caricaSingoloElementoById(idParcheggioParsed));

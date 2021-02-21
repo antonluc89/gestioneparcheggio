@@ -2,6 +2,7 @@ package it.prova.raccoltafilm.web.servlet.parcheggio;
 
 import java.io.IOException;
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -37,14 +38,14 @@ public class ExecuteInsertParcheggioServlet extends HttpServlet {
 		Integer capienzaParsed = UtilityForm.parseIntegerFromString(capienzaParam);
 
 		if (!UtilityForm.validateParcheggioFormInput(nomeParam, indirizzoParam, orarioAperturaParam,
-				orarioChiusuraParam, giornoChiusuraParam, capienzaParam) || giornoChiusuraParsed == null) {
+				orarioChiusuraParam, giornoChiusuraParam, capienzaParam)) {
 			request.setAttribute("errorMessage", "Attenzione sono presenti errori di validazione");
 			request.getRequestDispatcher("/parcheggio/insert.jsp").forward(request, response);
 			return;
 		}
 
-		Parcheggio parcheggioInstance = new Parcheggio(nomeParam, indirizzoParam, orarioAperturaParsed,
-				orarioChiusuraParsed, giornoChiusuraParsed, capienzaParsed);
+		Parcheggio parcheggioInstance = new Parcheggio(nomeParam, indirizzoParam,(Time) orarioAperturaParsed,
+				(Time) orarioChiusuraParsed, giornoChiusuraParsed, capienzaParsed);
 
 		try {
 

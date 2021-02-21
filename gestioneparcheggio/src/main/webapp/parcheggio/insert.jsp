@@ -52,14 +52,12 @@
 				<div class="form-row">
 					<div class="form-group col-md-3">
 						<label>Orario di apertura <span class="text-danger">*</span></label>
-						<input class="form-control" id="orarioApertura" type="time"
-							placeholder="hh:mm:ss" title="formato : hh:mm:ss" name="orarioApertura"
+						<input class="form-control" id="orarioApertura" type="date" placeholder="HH:mm" name="orarioApertura"
 							required>
 					</div>
 					<div class="form-group col-md-3">
 						<label>Orario di chiusura <span class="text-danger">*</span></label>
-						<input class="form-control" id="orarioChiusura" type="time"
-							placeholder="hh:mm:ss" title="formato : hh:mm:ss" name="orarioChiusura"
+						<input class="form-control" id="orarioChiusura" type="date" placeholder="HH:mm" name="orarioChiusura"
 							required>
 					</div>
 					<div class="form-group col-md-3">

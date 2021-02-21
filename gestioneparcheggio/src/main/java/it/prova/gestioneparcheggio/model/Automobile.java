@@ -1,6 +1,7 @@
 package it.prova.gestioneparcheggio.model;
 
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -28,7 +29,7 @@ public class Automobile {
 	@Column(name = "targa")
 	private String targa;
 	@Column(name = "orarioStampaTicket")
-	private Date orarioStampaTicket;
+	private Time orarioStampaTicket;
 	@Column(name = "minutiDurataTicket")
 	private Integer minutiDurataTicket;
 
@@ -39,7 +40,7 @@ public class Automobile {
 	public Automobile() {
 	}
 
-	public Automobile(String marca, String modello, String targa, Date orarioStampaTicket, Integer minutiDurataTicket, Parcheggio parcheggio) {
+	public Automobile(String marca, String modello, String targa, Time orarioStampaTicket, Integer minutiDurataTicket, Parcheggio parcheggio) {
 		this.marca = marca;
 		this.modello = modello;
 		this.targa = targa;
@@ -80,11 +81,11 @@ public class Automobile {
 		this.targa = targa;
 	}
 
-	public Date getOrarioStampaTicket() {
+	public Time getOrarioStampaTicket() {
 		return orarioStampaTicket;
 	}
 
-	public void setOrarioStampaTicket(Date orarioStampaTicket) {
+	public void setOrarioStampaTicket(Time orarioStampaTicket) {
 		this.orarioStampaTicket = orarioStampaTicket;
 	}
 

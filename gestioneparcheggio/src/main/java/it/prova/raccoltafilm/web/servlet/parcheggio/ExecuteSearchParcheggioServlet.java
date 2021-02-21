@@ -2,6 +2,7 @@ package it.prova.raccoltafilm.web.servlet.parcheggio;
 
 import java.io.IOException;
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -37,8 +38,8 @@ public class ExecuteSearchParcheggioServlet extends HttpServlet {
 
 		Integer capienzaParsed = UtilityForm.parseIntegerFromString(capienzaParam);
 
-		Parcheggio parcheggioExample = new Parcheggio(nomeParam, indirizzoParam, orarioAperturaParsed,
-				orarioChiusuraParsed, giornoChiusuraParsed, capienzaParsed);
+		Parcheggio parcheggioExample = new Parcheggio(nomeParam, indirizzoParam,(Time) orarioAperturaParsed,
+				(Time) orarioChiusuraParsed, giornoChiusuraParsed, capienzaParsed);
 
 		try {
 			request.setAttribute("parcheggi_list_attribute",

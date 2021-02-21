@@ -2,6 +2,7 @@ package it.prova.raccoltafilm.web.servlet.parcheggio;
 
 import java.io.IOException;
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -39,8 +40,8 @@ public class ExecuteUpdateParcheggioServlet extends HttpServlet {
 
 		Integer capienzaParsed = UtilityForm.parseIntegerFromString(capienzaParam);
 
-		if (!UtilityForm.validateParcheggioFormInput(nomeParam, indirizzoParam, orarioAperturaParam,
-				orarioChiusuraParam, giornoChiusuraParam, capienzaParam)) {
+		if (!UtilityForm.validateParcheggioFormInput(nomeParam, indirizzoParam,orarioAperturaParam,
+				 orarioChiusuraParam, giornoChiusuraParam, capienzaParam)) {
 			request.setAttribute("errorMessage", "Errori nella validazione");
 			request.getRequestDispatcher("/parcheggio/update.jsp").forward(request, response);
 			return;
@@ -53,8 +54,8 @@ public class ExecuteUpdateParcheggioServlet extends HttpServlet {
 					.caricaSingoloElementoById(idParsedParcheggio);
 			parcheggioUpdateInstance.setNome(nomeParam);
 			parcheggioUpdateInstance.setIndirizzo(indirizzoParam);
-			parcheggioUpdateInstance.setOrarioApertura(orarioAperturaParsed);
-			parcheggioUpdateInstance.setOrarioChiusura(orarioChiusuraParsed);
+			parcheggioUpdateInstance.setOrarioApertura((Time) orarioAperturaParsed);
+			parcheggioUpdateInstance.setOrarioChiusura((Time) orarioChiusuraParsed);
 			parcheggioUpdateInstance.setGiornoChiusura(giornoChiusuraParsed);
 			parcheggioUpdateInstance.setCapienza(capienzaParsed);
 

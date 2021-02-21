@@ -60,8 +60,8 @@
 								<tr>
 									<td>${parcheggioItem.nome }</td>
 									<td>${parcheggioItem.indirizzo }</td>
-									<td><fmt:formatDate type="time" value = "${parcheggioItem.orarioApertura }" /></td>
-									<td><fmt:formatDate type="time" value = "${parcheggioItem.orarioChiusura }" /></td>
+									<td><fmt:formatDate type = "time" value = "${parcheggioItem.orarioApertura }" /></td>
+									<td><fmt:formatDate type = "time" value = "${parcheggioItem.orarioChiusura }" /></td>
 									<td><fmt:formatDate type = "date" value = "${parcheggioItem.giornoChiusura }" /></td>
 									<td>${parcheggioItem.capienza }</td>
 									<td>
