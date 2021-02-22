@@ -68,6 +68,7 @@ public class ParcheggioDAOImpl implements ParcheggioDAO {
 
 	@Override
 	public List<Parcheggio> findByExample(Parcheggio parcheggioExample) throws Exception {
+
 		Map<String, Object> paramaterMap = new HashMap<String, Object>();
 		List<String> whereClauses = new ArrayList<String>();
 

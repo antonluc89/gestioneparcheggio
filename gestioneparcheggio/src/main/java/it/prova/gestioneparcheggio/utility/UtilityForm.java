@@ -48,22 +48,11 @@ public class UtilityForm {
 		}
 	}
 
-//	public static Date parseTimeEntryFromString(String orarioAperturaInputParam) {
-//		if (StringUtils.isBlank(orarioAperturaInputParam))
-//			return null;
-//
-//		try {
-//			return new SimpleDateFormat("hh:mm:ss").parse(orarioAperturaInputParam);
-//		} catch (ParseException e) {
-//			return null;
-//		}
-//	}
-
 	public static LocalTime parseTimeEntryFromString(String orarioAperturaInputParam) {
 		if (StringUtils.isBlank(orarioAperturaInputParam))
 			return null;
 
-		return LocalTime.parse(orarioAperturaInputParam,DateTimeFormatter.ofPattern("HH:mm:ss"));
+		return LocalTime.parse(orarioAperturaInputParam, DateTimeFormatter.ofPattern("HH:mm:ss"));
 	}
 
 	public static Long parseIdEntryToLongFromString(String idEntryStringParam) {

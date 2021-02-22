@@ -67,7 +67,7 @@ public class AutomobileDAOImpl implements AutomobileDAO {
 		if (parcheggioInstance == null) {
 			throw new Exception("Problema valore in input");
 		}
-
+		
 		TypedQuery<Automobile> query = entityManager.createQuery("select a from Automobile a where a.parcheggio = ?1",
 				Automobile.class);
 		query.setParameter(1, parcheggioInstance);
