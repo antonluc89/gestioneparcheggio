@@ -1,6 +1,5 @@
 package it.prova.gestioneparcheggio.model;
 
-import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.HashSet;
@@ -49,6 +48,10 @@ public class Parcheggio {
 		this.orarioChiusura = orarioChiusura;
 		this.giornoChiusura = giornoChiusura;
 		this.capienza = capienza;
+	}
+
+	public Parcheggio(Long id) {
+		this.id = id;
 	}
 
 	public Long getId() {

@@ -1,9 +1,7 @@
 package it.prova.raccoltafilm.web.servlet.automobile;
 
 import java.io.IOException;
-import java.sql.Time;
 import java.time.LocalTime;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -44,7 +42,7 @@ public class ExecuteInsertAutomobileServlet extends HttpServlet {
 		}
 
 		Automobile automobileInsertInstance = new Automobile(marcaParam, modelloParam, targaParam, orarioStampaTicketParsed,
-				minutiDurataTicketParsed,new Parcheggio());
+				minutiDurataTicketParsed,new Parcheggio(idParcheggioParsed));
 
 		try {
 			MyServiceFactory.getAutomobileServiceInstance().inserisciNuovo(automobileInsertInstance);

@@ -70,9 +70,8 @@
 								<td>${automobileItem.marca }</td>
 								<td>${automobileItem.modello }</td>
 								<td>${automobileItem.targa }</td>
-								<td><fmt:formatDate type="DATE"
-										value="${automobileItem.orarioStampaTicket }" /></td>
-								<td>${automobileItem.durataTicket }</td>
+								<td>${automobileItem.orarioStampaTicket }</td>
+								<td>${automobileItem.minutiDurataTicket }</td>
 								<td><a class="btn  btn-sm btn-outline-secondary"
 									href="ExecuteVisualizzaAutomobileServlet?idAutomobile=${automobileItem.id }">View</a>
 									<a class="btn  btn-sm btn-outline-primary ml-2 mr-2"

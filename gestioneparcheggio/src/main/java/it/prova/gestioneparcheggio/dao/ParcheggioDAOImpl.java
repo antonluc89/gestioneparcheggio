@@ -62,7 +62,7 @@ public class ParcheggioDAOImpl implements ParcheggioDAO {
 
 	@Override
 	public Parcheggio findParkingBycars(Long idInput) throws Exception {
-		return entityManager.createQuery("from Parcheggio p left join fetch p.automobili where r.id=:idParcheggio",
+		return entityManager.createQuery("from Parcheggio p left join fetch p.automobili where p.id=:idParcheggio",
 				Parcheggio.class).setParameter("idRegista", idInput).getSingleResult();
 	}
 

@@ -12,22 +12,26 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 public class UtilityForm {
 
-	public static boolean validateAutomobileInputForm(String marcaInputParam, String modelloInputParam,
-			String targaInputParam, String orarioStampaTicketStringParam, String minutiDurataTicketStringParam, String parcheggioIdStringParam) {
-	
-		if (StringUtils.isBlank(marcaInputParam) || StringUtils.isBlank(modelloInputParam)
-				|| StringUtils.isBlank(targaInputParam) || StringUtils.isBlank(orarioStampaTicketStringParam) || StringUtils.isBlank(minutiDurataTicketStringParam)|| StringUtils.isBlank(parcheggioIdStringParam)) {
+	public static boolean validateParcheggioFormInput(String nomeInputParam, String indirizzoInputParam,
+			String orarioAperturaInputParam, String orarioChiusuraInputParam, String giornoChiusuraInputParam,
+			String capienzaStringParam) {
+
+		if (StringUtils.isBlank(nomeInputParam) || StringUtils.isBlank(indirizzoInputParam)
+				|| StringUtils.isBlank(orarioAperturaInputParam) || StringUtils.isBlank(orarioChiusuraInputParam)
+				|| StringUtils.isBlank(giornoChiusuraInputParam) || !NumberUtils.isCreatable(capienzaStringParam)) {
 			return false;
 		}
 		return true;
 	}
 
-	public static boolean validateParcheggioFormInput(String nomeInputParam, String indirizzoInputParam,
-			String orarioAperturaInputParam, String orarioChiusuraInputParam, String giornoChiusuraInputParam, String capienzaStringParam) {
+	public static boolean validateAutomobileInputForm(String marcaInputParam, String modelloInputParam,
+			String targaInputParam, String orarioStampaTicketStringParam, String minutiDurataTicketStringParam,
+			String parcheggioIdStringParam) {
 
-		if (StringUtils.isBlank(nomeInputParam) || StringUtils.isBlank(indirizzoInputParam)
-				|| !NumberUtils.isCreatable(orarioAperturaInputParam) || StringUtils.isBlank(orarioChiusuraInputParam)
-				|| !NumberUtils.isCreatable(giornoChiusuraInputParam) || !NumberUtils.isCreatable(capienzaStringParam)) {
+		if (StringUtils.isBlank(marcaInputParam) || StringUtils.isBlank(modelloInputParam)
+				|| StringUtils.isBlank(targaInputParam) || StringUtils.isBlank(orarioStampaTicketStringParam)
+				|| StringUtils.isBlank(minutiDurataTicketStringParam)
+				|| !NumberUtils.isCreatable(parcheggioIdStringParam)) {
 			return false;
 		}
 		return true;
@@ -43,7 +47,18 @@ public class UtilityForm {
 			return null;
 		}
 	}
-	
+
+//	public static Date parseTimeEntryFromString(String orarioAperturaInputParam) {
+//		if (StringUtils.isBlank(orarioAperturaInputParam))
+//			return null;
+//
+//		try {
+//			return new SimpleDateFormat("hh:mm:ss").parse(orarioAperturaInputParam);
+//		} catch (ParseException e) {
+//			return null;
+//		}
+//	}
+
 	public static LocalTime parseTimeEntryFromString(String orarioAperturaInputParam) {
 		if (StringUtils.isBlank(orarioAperturaInputParam))
 			return null;
@@ -61,7 +76,7 @@ public class UtilityForm {
 			return null;
 		}
 	}
-	
+
 	public static Integer parseIntegerFromString(String minutiDurataParam) {
 		if (StringUtils.isBlank(minutiDurataParam))
 			return null;

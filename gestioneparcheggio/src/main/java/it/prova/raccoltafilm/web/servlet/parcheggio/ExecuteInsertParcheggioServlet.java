@@ -1,7 +1,6 @@
 package it.prova.raccoltafilm.web.servlet.parcheggio;
 
 import java.io.IOException;
-import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
 

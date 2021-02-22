@@ -52,8 +52,7 @@
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label>Orario di stampa ticket</label> <input class="form-control"
-					id="orarioStampaTicket" type="time" placeholder="HH:mm"
-					title="formato : HH:mm" name="orarioStampaTicket">
+					id="orarioStampaTicket" type="time" placeholder="hh:mm:ss" name="orarioStampaTicket">
 			</div>
 			<div class="form-group col-md-6">
 				<label>Durata ticket (minuti)</label> <input type="number"
