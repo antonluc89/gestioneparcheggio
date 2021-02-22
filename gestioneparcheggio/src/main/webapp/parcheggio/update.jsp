@@ -53,14 +53,16 @@
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label>Orario di apertura</label> <input class="form-control"
-							id="orarioChiusura" type="date" placeholder="hh:mm:ss" name="orarioApertura"
+							id="orarioChiusura" type="date" placeholder="hh:mm:ss"
+							name="orarioApertura"
 							value="${update_parcheggio_attr.orarioApertura}">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label>Orario di chiusura</label> <input class="form-control"
-							id="orarioChiusura" type="time" placeholder="hh:mm:ss" name="orarioChiusura"
+							id="orarioChiusura" type="time" placeholder="hh:mm:ss"
+							name="orarioChiusura"
 							value="${update_parcheggio_attr.orarioChiusura}">
 					</div>
 				</div>
